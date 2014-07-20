@@ -1,0 +1,250 @@
+q[4]-q[2]
+y
+IQR(y)
+y
+median(y)
+28-15
+y
+mean(y)
+myMean <- rep(mean(y),10)
+myMean
+absVar<-y-myMean
+absVar
+absVar <- abs(absVar)
+absVar
+sum(absVar)
+80/mean(y)
+sqrt(223.62)
+2013-1954
+18.62+15.55
+5.6+6.8
+1005-337
+684-337
+datasets(iris)
+data(iris)
+head(iris)
+set.seed(1234)
+ind <- sample(2,nrow(iris),replace=T,prob=c(.7,.3))
+ind
+str(ind)
+table(ind)
+38/(38+112)
+sample(2,8,replace=T)
+sample(6,8,replace=T)
+sample(c(1,3,4,5,6),10,replace=T)
+test<-sample(c(1,3,4,5,6),10,replace=T)
+table(test)
+test<-sample(c(1,3,4,5,6),1000,replace=T)
+table(test)
+trainData <- iris[ind==1,]
+trainData
+str(trainData)
+testData <- iris[ind==2,]
+testData
+length(testData[,1])
+38/150
+1947+18
+myTest <- as.matrix(rnorm(9),3)
+myTetst
+myTest
+myTest <- as.matrix(rnorm(9),3,3)
+myTest
+myTest <- matrix(rnorm(9),3)
+myTest
+new <- 1:3
+new
+myTest <- data.frame(myTest)
+class(myTest)
+myTest["NEW"] = new
+myTest
+new <- new[1:2]
+new
+myTest["BigTest"] = new
+foo <- c("Hal","Val","Sal")
+myTest["foo"]=Bingo
+myTest["Bingo"]=foo
+myTest
+activityData <- read.csv("activity.csv",header=T)
+names(activityData)
+dims(activityData)
+dim(activityData)
+head(activityData)
+61*24*12
+17568*5
+tail(activityData)
+activityData[interval==5,]
+activityData[interval=="5",]
+activityData[activityData$interval=="5",]
+mySub <- activityData[activityData$interval=="5",]
+length(mySub$interval)
+class(activityData)
+class(names(activityData))
+str(activityData)
+attach(activityData)
+length(date)
+detach(activityData)
+length(date)
+date
+with(activityData, tapply(steps, date, mean))
+with(activityData, tapply(steps, date, mean, na.rm=T))
+with(activityData, tapply(steps, date, mean(na.rm=T))
+with(activityData, tapply(steps, date, mean(na.rm=T)))
+with(activityData, tapply(steps(na.rm=T), date, mean)
+with(activityData, tapply(steps(na.rm=T), date, mean))
+is.na(activityData[activityData$steps=="2012-10-01",1])
+table(is.na(activityData[activityData$steps=="2012-10-01",1]))
+table(is.na(activityData[activityData$steps=="2012-10-02",1]))
+table(is.na(activityData[activityData$steps=="2012-10-03",1]))
+table(is.na(activityData[activityData$steps=="2012-10-04",1]))
+names(activityData)
+table(is.na(activityData[steps=="2012-10-04",1]))
+table(is.na(activityData["2012-10-04" %in% activityData$steps,1]))
+is.na(activityData$steps[activityData$date=="2012-10-01"]
+is.na(activityData$steps[activityData$date=="2012-10-01"])
+is.na(activityData$steps[activityData$date=="2012-10-01",])
+is.na(activityData$steps[activityData$date=="2012-10-01"])
+table(is.na(activityData$steps[activityData$date=="2012-10-01"]))
+table(is.na(activityData$steps[activityData$date=="2012-10-02"]))
+table(is.na(activityData$steps[activityData$date=="2012-10-03"]))
+table(is.na(activityData$steps[activityData$date=="2012-10-04"]))
+tapply(activityData$steps,activityData$date, table(is.na(x)))
+tapply(activityData$steps,activityData$date, is.na(x))
+tapply(activityData$steps,activityData$date, is.na())
+tapply(activityData$steps,activityData$date, is.na)
+tapply(activityData$steps,activityData$date, table(is.na))
+table(tapply(activityData$steps,activityData$date, is.na))
+NAs <- tapply(activityData$steps,activityData$date, is.na)
+table(NAs)
+NAs <- tapply(activityData$steps,activityData$date, is.na)
+NAs
+lapply(NAs,table)
+table(lapply(NAs,table))
+sum(activityData$steps[activityData$date=="2012-10-02"])
+sum(activityData$steps["2012-10-02" %in% activityData$date])
+sum(activityData$steps)
+sum(activityData$steps,na.rm=T)
+570608/61
+totalMeans <- with(activityData, tapply(steps,date,sum),na.rm=T)
+totalMeans
+mean(totalMeans, na.rm=T)
+mean(totalMeans, na.rm=F)
+median(totalMeans)
+median(totalMeans, na.rm=T)
+table(totalMeans)
+sort(table(totalMeans))
+sorted <-sort(table(totalMeans))
+length(sorted)
+length(sorted)/2
+26*2
+sorted[27]
+totalDailySteps <- with(activityData, tapply(steps,date,sum),na.rm=T)
+hist(totalDailySteps)
+hist(totalDailySteps, binwidth=1)
+with(activityData, tapply(steps,date,sum),na.rm=TRUE)
+with(activityData, tapply(steps,date,sum),na.rm=TRUE)
+with(activityData, tapply(steps,date,sum))
+sum(1,2,NA)
+sum(1,2,NA, na.rm=T)
+library(ggplot2)
+totalSteps <- with(activityData, tapply(steps,date,sum))
+qplot(totalSteps)
+qplot(totalSteps, binwidth=1)
+qplot(totalSteps, binwidth=.3)
+qplot(totalSteps, binwidth=range/30.)
+qplot(totalSteps, binwidth=30)
+qplot(totalSteps, binwidth=500)
+qplot(totalSteps, binwidth=300)
+qplot(totalSteps, binwidth=400)
+names(totalSteps)
+length(names(totalSteps))
+length(names(totalSteps),na.rm=T)
+class(totalSteps)
+qplot(totalSteps, binwidth=1000)
+qplot(totalSteps, binwidth=600)
+qplot(totalSteps, binwidth=500)
+qplot(totalSteps, binwidth=300, width=.8)
+qplot(totalSteps, binwidth=500, width=.8)
+qplot(totalSteps, binwidth=500)
+qplot(totalSteps, binwidth=500, width=.5)
+qplot(totalSteps, binwidth=500)
+qplot(totalSteps, binwidth=500, width=5)
+qplot(totalSteps, binwidth=300)
+qplot(totalSteps, binwidth=800)
+qplot(totalSteps, binwidth=1000)
+qplot(totalSteps, binwidth=1000, geom=density)
+qplot(totalSteps, binwidth=1000, geom="density")
+qplot(totalSteps, binwidth=1000, geom="histogram")
+qplot(totalSteps, binwidth=1000)
+qplot(totalSteps, binwidth=1000, geom="density")
+qplot(totalSteps, binwidth=1000, geom="density", na.rm=T)
+with(activityData, tapply(steps,date,sum))
+results <- with(activityData, tapply(steps,date,sum))
+table(is.na(results))
+names(activityData)
+int_date <- with(activityDate, paste(date, interval))
+int_date <- with(activityData, paste(date, interval))
+head(int_date)
+strptime(int_date, "%Y-%m-%d %S")
+my_int_date <- strptime(int_date, "%Y-%m-%d %S")
+my_int_date(1:100)
+my_int_date[1:100]
+unique(activityData$interval)
+288*5
+86400/5
+60*24
+1440/5
+ts <- with(activityData, tapply(steps, interval, mean)
+ts <- with(activityData, tapply(steps, interval, mean))
+myTS <- with(activityData, tapply(steps, interval, mean))
+dim(myTS)
+names(myTS)
+head(myTS)
+myTS <- with(activityData, tapply(steps, interval, mean), na.rm=T)
+head(myTS)
+myTS <- with(activityData, tapply(steps, interval, mean), na.rm=T))
+myTS <- with(activityData, tapply(steps(na.rm=T), interval, mean))
+myTS <- with(activityData, tapply(steps, interval, mean(x, na.rm=T)))
+myTS <- with(activityData, tapply(steps, interval, mean(x, na.rm=T))
+myTS <- lapply(split(activityData$steps, activityData$interval), mean)
+myTS <- lapply(split(activityData$steps, activityData$interval), mean, na.rm=T)
+myTS[1:100]
+plot(myTS)
+dfTS <- data.frame(myTS)
+names(dfTS)
+plot(dfTS)
+myTS <- sapply(split(activityData$steps, activityData$interval), mean, na.rm=T)
+class(myTS)
+head(myTS)
+plot(myTS)
+plot(myTS, type="l")
+head(myTS)
+names(myTS)
+plot(names(myTS), myTS, type="l")
+plot(names(myTS), myTS, type="l", xlab="Interval")
+plot(names(myTS), myTS, type="l", xlab="Interval", ylab="Average number of steps")
+plot(names(myTS), myTS, type="l", xlab="Interval", ylab="Average number of steps", main="Daily pattern")
+60*24
+1440*5
+max(myTS)
+str(myTS)
+max(names(myTS))
+myTS[955]
+myTS[[955]]
+df <- data.frame(names(myTS), myTS)
+max(df$myTS)
+max(df)
+df[order(df$myTS), decreasing=T]
+df <- df[order(df$myTS, decreasing=T)]
+df <- df[order(df$myTS, decreasing=T),]
+head(df)
+dailyPattern <- sapply(split(activityData$steps, activityData$interval), mean, na.rm=T)
+df <- data.frame(Interval=names(dailyPattern), Steps=dailyPattern)
+head(df)
+plot(df$Interval), df$Steps, type="l", xlab="Interval", ylab="Average number of steps", main="Daily activity pattern across 5-minute intervals")
+plot(df$Interval, df$Steps, type="l", xlab="Interval", ylab="Average number of steps", main="Daily activity pattern across 5-minute intervals")
+head(df)
+df <- data.frame(Steps=dailyPattern, Interval=names(dailyPattern))
+head(df)
+df <- df[order(df$Steps, decreasing=T),]
+df[1,]
+df[1,2]
